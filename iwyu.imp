@@ -1,0 +1,42 @@
+[
+    # Allow C header wrappers
+    { "include": ["<stddef.h>", "public", "<cstddef>", "public"] },
+    { "include": ["<stdint.h>", "public", "<cstdint>", "public"] },
+    { "include": ["<stdlib.h>", "public", "<cstdlib>", "public"] },
+    { "include": ["<string.h>", "public", "<cstring>", "public"] },
+    { "include": ["<math.h>",   "public", "<cmath>",   "public"] },
+    { "include": ["<assert.h>", "public", "<cassert>", "public"] },
+    { "include": ["<errno.h>",  "public", "<cerrno>",  "public"] },
+    { "include": ["<signal.h>", "public", "<csignal>", "public"] },
+    { "include": ["<time.h>",   "public", "<ctime>",   "public"] },
+    { "include": ["<locale.h>", "public", "<clocale>", "public"] },
+    { "include": ["<stdio.h>",  "public", "<cstdio>",  "public"] },
+    { "include": ["<stdarg.h>", "public", "<cstdarg>", "public"] },
+    { "include": ["<ctype.h>",  "public", "<cctype>",  "public"] },
+    { "include": ["<wchar.h>",  "public", "<cwchar>",  "public"] },
+    { "include": ["<wctype.h>", "public", "<cwctype>", "public"] },
+
+    # Allow <chrono> instead of <bits/chrono.h>
+    { "include": ["<bits/chrono.h>", "public", "<chrono>", "public"] },
+
+    # Allow <cmath> instead of <bits/std_abs.h>
+    { "include": ["<bits/std_abs.h>", "public", "<cmath>", "public"] },
+
+    # Allow <utility> instead of <bits/utility.h>
+    { "include": ["<bits/utility.h>", "public", "<utility>", "public"] },
+
+    # Allow <utility> instead of <iterator> for pair
+    { "include": ["<iterator>", "public", "<utility>", "public"] },
+
+    # Allow <boost/process.hpp> instead of <boost/process/detail/child_decl.hpp>
+    { "include": ["<boost/process/detail/child_decl.hpp>", "public", "<boost/process.hpp>", "public"] },
+
+    # Allow <boost/process.hpp> instead of <boost/process/pipe.hpp>
+    { "include": ["<boost/process/pipe.hpp>", "public", "<boost/process.hpp>", "public"] },
+
+    # Allow <memory> instead of <ext/alloc_traits.h>
+    { "include": ["<ext/alloc_traits.h>", "public", "<memory>", "public"] },
+
+    # Allow <condition_variable> instead of <cxxabi.h>
+    { "include": ["<cxxabi.h>", "public", "<condition_variable>", "public"] },
+]

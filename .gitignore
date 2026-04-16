@@ -1,0 +1,46 @@
+# Build outputs
+build/
+out/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+_deps/
+
+# Generated presets (e.g. Conan)
+CMakeUserPresets.json
+
+# Compile database (regenerate with CMake)
+compile_commands.json
+
+# Compiled / linked artifacts
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+
+# Debug / profiling
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Editors / IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
