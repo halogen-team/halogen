@@ -1,0 +1,25 @@
+include("${CMAKE_CURRENT_SOURCE_DIR}/cmake/iwyu.cmake")
+
+# Wrapper function for add_library that generates IWYU sources if enabled
+function(halogen_add_library target_name)
+    message(STATUS "Adding library ${target_name}")
+    if(USE_IWYU)
+        string(REPLACE "${CMAKE_SOURCE_DIR}/" "" relative_path "${CMAKE_CURRENT_SOURCE_DIR}")
+        halogen_generate_iwyu_sources(${relative_path})
+        add_library(${target_name} ${ARGN} ${generated_sources})
+    else()
+        add_library(${target_name} ${ARGN})
+    endif()
+endfunction()
+
+# Wrapper function for add_executable that generates IWYU sources if enabled
+function(halogen_add_executable target_name)
+    message(STATUS "Adding executable ${target_name}")
+    if(USE_IWYU)
+        string(REPLACE "${CMAKE_SOURCE_DIR}/" "" relative_path "${CMAKE_CURRENT_SOURCE_DIR}")
+        halogen_generate_iwyu_sources(${relative_path})
+        add_executable(${target_name} ${ARGN} ${generated_sources})
+    else()
+        add_executable(${target_name} ${ARGN})
+    endif()
+endfunction()

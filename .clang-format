@@ -4,7 +4,6 @@ BasedOnStyle: LLVM
 
 # General formatting
 Language: Cpp
-Standard: c++23
 ColumnLimit: 115
 UseTab: Never
 TabWidth: 4
